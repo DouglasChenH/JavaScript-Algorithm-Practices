@@ -44,7 +44,7 @@ var matrixReshape = function(nums, r, c) {
     var colNum = nums[0].length;
     var elmList = [];
     var newMatrix =[];
-    if (r * c > rowNum * colNum) {
+    if (r * c != rowNum * colNum) {
         return nums;
     }
     
