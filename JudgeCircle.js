@@ -20,6 +20,15 @@ var judgeCircle = function(moves) {
         return false;
     }
     
+    var ver = getLen(/U/ig) === getLen(/D/ig) ? true : false;
+    var hor = getLen(/L/ig) === getLen(/R/ig) ? true : false;
+    return ver && hor;
+    
+    function getLen(re) {
+        var match = moves.match(re); // maybe get a null object 
+        return  match ? match.length : 0;
+    }
+    /* method 2
     var RCounter = 0;
     var LCounter = 0;
     var UCounter = 0;
@@ -47,4 +56,5 @@ var judgeCircle = function(moves) {
     }
     
     return false;
+    */
 };
